@@ -1,1 +1,1 @@
-This JavaScript project moslty involves the console and a prompt to get user input, the scores of both user and computer are recorded on the console
+From a simple game on the console to the refined touch and click button functions, this project showcases the importance of DOM manipulation and the ease of it.
