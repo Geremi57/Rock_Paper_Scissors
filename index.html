@@ -1,20 +1,105 @@
 <!DOCTYPE html>
- <html lang="en">
-  <link rel="stylesheet" href="style.css">
+<html lang="en">
+  <link rel="stylesheet" href="style.css" />
   <head>
-    <meta charset="UTF-8">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   </head>
   <body>
-    <h1>Rock Paper Scissors</h1>
+    <h1 class="title">
+      <u>Rock Paper Scissors</u>
+    </h1>
+    <img class="rtsimg" src="./images/rock-paper-scissors.png" />
 
-    <p>Input your choice in the prompt provided when reloading the page</p>
+    <p class="howToPlay">
+      <button class="rules">How to Play</button>
+    </p>
 
-    <p>This is a rock paper scissors game based on the console to find out your score right click press inspect and lastly press console or simply for windows press f12.</p>
+    <main>
+      <div class="left">
+        <p class="rock">
+          <button class="option">
+            <img src="./images/stone.png" />
+          </button>
+        </p>
 
-    <p>Refresh the page to play another round</p>
-    <script src="script.js">
+        <p class="paper">
+          <button class="option"><img src="./images/paper.png" /></button>
+        </p>
 
-    </script>
+        <p class="scissors">
+          <button class="option"><img src="./images/scissor.png" /></button>
+        </p>
+      </div>
+
+      <div class="howToModal hidden">
+        <p class="first">
+          🔴Select any of the three 
+          <button class="closeRule">&times;</button>
+          <p class="Vs">play against your computer</p>
+        </p>
+        <p class="second">👊 beats ✌</p>
+        <p class="third">🖐 beats 👊</p>
+        <p class="fourth">✌ beats 🖐</p>
+        <h2>Good Luck ^___^</h2>
+      </div>
+
+      <div class="humanModal hidden">
+        <button class="closeYou">&times;</button>
+        <h1>You won this round</h1>
+        <p class="yourEmoji">😎</p>
+        <p class="Yourscore">Your score: 0</p>
+        <p class="computerScore">Computer score: 0</p>
+      </div>
+
+      <div class="modal hidden">
+        <button class="closeComp">&times;</button>
+        <h1>The computer won this round</h1>
+        <p class="computerEmoji">🤖</p>
+        <p class="Yours">Your Score: 0</p>
+        <p class="Computers">Computer Score: 0</p>
+      </div>
+
+      <div class="tieModal hidden">
+        <button class="closeTie">&times;</button>
+        <h1>It's a tie for this round</h1>
+        <p class="tieEmoji">🤝</p>
+        <p class="human">You chose: ?</p>
+        <p class="computer">Computer chose : ?</p>
+      </div>
+
+      <div class="winRoundModal hidden">
+        <button class="closeRound">&times;</button>
+        <h1>You winnn!!!!</h1>
+        <p class="roundEmoji">🥳</p>
+        <p class="roundYou">You Win the round with: 0 points</p>
+        <button class="resetUser">Reset</button>
+      </div>
+
+      <div class="lossRoundModal hidden">
+        <button class="closeLoss">&times;</button>
+        <h1>You Lost</h1>
+        <p class="lossEmoji">😩</p>
+        <p class="lossComputer">The computer wins the round with: 0 points</p>
+        <button class="resetCpu">Reset</button>
+      </div>
+
+      <div class="overlay hidden"></div>
+
+      <section class="right">
+        <div class="picked">
+          <p class="message">You picked : ?</p>
+          <p class="label-score">Computer picked: ?</p>
+        </div>
+        <div class="whoWon">
+          <p class="winner">Who wins</p>
+
+          <p class="round">Round: 1</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
- </html>
+</html>
